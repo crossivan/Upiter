@@ -1,0 +1,39 @@
+.main{
+  padding: 0 50px;
+
+}
+
+.ceram{
+  display: none;
+  position: relative;
+  min-height: 600px;
+
+  &__o1{
+    position: absolute;
+    z-index: 2;
+  }
+
+  &__o2{
+    position: absolute;
+    height: 400px;
+    top: 30px;
+    left: 20px;
+    z-index: 1;
+  }
+  &__name{
+    position: absolute;
+    z-index: 3;
+    top: 370px;
+    left: 100px;
+    text-align: center;
+  }
+  &__date{
+    position: absolute;
+    z-index: 5;
+    top: 430px;
+    left: 90px;
+    font-stretch: extra-condensed;
+    letter-spacing: -3px;
+
+  }
+}

@@ -1,0 +1,38 @@
+@import "styles/mixin";
+@import "styles/layout";
+@import "styles/header";
+@import "styles/nav";
+@import "styles/main";
+@import "styles/footer";
+@import "styles/utils";
+@import "styles/photo_list";
+
+h1, h2, h3, h4, h5, h6, p {
+    margin-top: 0;
+}
+
+:root{
+    --header_height: 200px;
+    --footer_height: 150px;
+    --header_color: #a3a7ad;
+    --main_color: #d6d7d9;
+    --header_logo: url("img/logo.png");
+}
+
+@font-face {
+    font-family: 'Font Icon';
+    src: local('fonts/Font-Icons.ttf'), url(fonts/Font-Icons.ttf);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

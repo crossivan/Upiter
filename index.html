@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Фотосалон Юпитер</title>
+    <link href="style.css" rel=" stylesheet" type=" text/css">
+    <link rel="icon" href="icon/logo.ico" sizes="any">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+          integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+          href="../../Downloads/2022.09.29 html-20221022T130219Z-001/2022.10.18 bem Мессенджер/final/style.scss">
+</head>
+<body class="body">
+<div class="layout">
+    <header class="header layout__header">
+        <div class="header__logo"></div>
+        <div class="spacer">Фотостудия Юпитер</div>
+        <div class="header__login">
+            <img class="avatar" src="img/avatar.png" alt="Avatar">
+            <span>Hi, Vasay!</span>
+        </div>
+    </header>
+    <div class="nav layout__nav">
+        <ul class="menu">
+            <li class="menu__item menu__item--1" onclick="menuClick(1)">
+                <span class="icon">A</span>
+            </li>
+            <li class="menu__item menu__item--2" onclick="menuClick(2)">
+                <span class="icon">B</span>
+            </li>
+            <li class="menu__item menu__item--3" onclick="menuClick(3)">
+                <span class="icon">C</span>
+            </li>
+            <li class="menu__item menu__item--4" onclick="menuClick(4)">
+                <span class="icon">D</span>
+            </li>
+            <li class="menu__item menu__item--5" onclick="menuClick(5)">
+                <span class="icon">E</span>
+            </li>
+        </ul>
+    </div>
+    <main class="main layout__main">
+        <div class="photo_list">
+            <div class="photo_list__photo"><img class="photo_list__icon" src="img/1.jpg" /></div>
+            <div class="photo_list__photo"><img class="photo_list__icon" src="img/2.jpg" /></div>
+            <div class="photo_list__photo"><img class="photo_list__icon" src="img/3.jpeg" /></div>
+            <div class="photo_list__photo"><span class="photo_list__icon">A</span></div>
+            <div class="photo_list__photo"><span class="photo_list__icon">A</span></div>
+            <div class="photo_list__photo"><span class="photo_list__icon">A</span></div>
+            <div class="photo_list__photo"><span class="photo_list__icon">A</span></div>
+            <div class="photo_list__photo"><span class="photo_list__icon">A</span></div>
+            <div class="photo_list__photo"><span class="photo_list__icon">A</span></div>
+            <div class="photo_list__photo"><span class="photo_list__icon">A</span></div>
+            <div class="photo_list__photo"><span class="photo_list__icon">A</span></div>
+            <div class="photo_list__photo"><span class="photo_list__icon">A</span></div>
+            <button class="photo_list__button">Отправить на распечатку</button>
+        </div>
+
+        <div class="ceram">
+            <img class="ceram__o1" src="img/oval.png" alt="Oval">
+            <img class="ceram__o2" src="img/no_face.png" alt="Oval">
+            <p class="ceram__name">Рогов <br /> Иван Иванович</p>
+            <p class="ceram__date">12.05.1922 - 10.15.2022</p>
+        </div>
+
+
+        <!--
+        <form id="upload" action="upload.php" method="POST" enctype="multipart/form-data">
+            <fieldset>
+                <legend>HTML Загрузка Файлов</legend>
+                <input type="hidden" id="MAX_FILE_SIZE" name="MAX_FILE_SIZE" value="300000" />
+                <div>
+                    <label for="fileselect">Выберите файлы для загрузки:</label>
+                    <input type="file" id="fileselect" name="fileselect[]" multiple="multiple" />
+                    <div id="filedrag" >Или перетащите их сюда</div>
+                </div>
+                <div id="submitbutton">
+                    <button type="submit">Загрузить файлы</button>
+                </div>
+            </fieldset>
+        </form>
+        -->
+
+    </main>
+    <footer class="footer layout__footer">
+        <div class="footer_child">
+            <p class="footer__content">Фотостудия "ЮПИТЕР"</p>
+            <p class="footer__copy">Copyright &copy; 2022</p>
+        </div>
+    </footer>
+</div>
+</body>
+
+<script type="text/javascript">
+
+    function resetMenu(){
+        const menuItem = document.querySelectorAll(".menu__item");
+        menuItem.forEach(function (entry){
+            entry.style.background = "#0d6efd";
+        })
+    }
+
+
+    function menuClick(menuIndex){
+        console.log(menuIndex)
+        switch (menuIndex){
+            case 1:
+                break
+            case 2:
+                document.querySelector(".photo_list").style.display = "flex";
+                document.querySelector(".ceram").style.display = "none";
+                resetMenu();
+                document.querySelector(".menu__item--" + menuIndex + "").style.background = "#2a4769";
+                break
+            case 3:
+                document.querySelector(".photo_list").style.display = "none";
+                document.querySelector(".ceram").style.display = "inherit";
+                resetMenu();
+                document.querySelector(".menu__item--" + menuIndex + "").style.background = "#2a4769";
+                break
+            case 4:
+                break
+            case 5:
+                break
+        }
+
+    }
+</script>
+</html>

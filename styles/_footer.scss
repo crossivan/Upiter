@@ -1,0 +1,10 @@
+.footer{
+  background-color: var(--header_color);
+  &__content{
+    color: #6f42c1;
+  }
+  &__copy{
+    font-size: 16px;
+    text-align: center;
+  }
+}
